@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- google fonts -->
+    <title>myTeam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="/css/index/index_style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div id="logo">
+            <img src="/img/teams_logo.png" alt="mymeals.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home" class="hover">Home</a></li>
+            <li class="item"><a href="#meeting" class="hover">Meeting</a></li>
+            <li class="item"><a href="#chat" class="hover">Chat</a></li>
+            <li class="item">
+                <div id="google_translate_element" class="translator"></div>
+
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <p class="welcome"><b>Welcome to Team</b></p>
+        <p class="content">It's a MS Teams clone. Bringing people together is what we do.</p>
+        <p class="content">Be it bussiness work or some family time, Teams let's you connect to people far off through video chat.</p>
+        <p class="content">Start your own meeting or join a meeting with the unique meeting ID.</p>
+        <p class="content">Stay Connected!!</p>
+    </section>
+
+    <section id="meeting">
+        <div class="container">
+            <div class="information">
+                <div class="elements">
+                    <h2 class="meeting-h2">Want to start a meeting?</h2>
+                </div>
+
+                <div class="elements">
+                    <button class="newmeet-btn"><a href="/meeting">Click Here</a></button>
+                </div>   
+            </div>
+            
+            <div class="information">
+                <div class="elements">
+                    <h2 class="meeting-h2">Want to join a meeting?</h2>
+                </div>
+
+                <div class="elements">
+                    <form action="/meeting" method="POST" class="id-input">
+                        <input type="text" placeholder="Meeting ID" name="MeetId" class="meet-id">
+                        <button class="join-btn">Join</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="chat"></div>
+
+    <footer>
+        <div>
+            Copyright  &copy;  myTeam <br>All Rights Reserved
+        </div>
+    </footer>
+    
+    <script src="/scripts/room.ejs"></script>
+</body>
+</html>

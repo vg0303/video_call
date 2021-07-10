@@ -1,0 +1,332 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Theme colours ==================================================================================================== */
+.theme-dark{
+    --main_videos_bg_color: #000814;
+    --main_controls_bg_color: #01161e;
+    --main_controls_color: #D2D2D2;
+    --main_right_render_bg_color: #01161e;
+    --main_right_border_left: #3D3D42;
+    --video_border: #242335;
+    --hover_bg_color: #62626285;
+    --main_header_color: #F5F5F5;
+    --main_chat_window_border_bottom: #3D3D42;
+    --main_message_container_input_color: #F5F5F5;
+    --messages_color: whitesmoke;
+    --text_right_bg_color: #ad2e24;
+    --text_left_bg_color: #626262;
+    --main_message_send_color: #d2d2d2;
+    --user_avatar_bg_color: wheat;
+    --user_name_color: #d2d2d2;
+}
+
+.theme-light{
+    --main_videos_bg_color: #ebf4f5;
+    --main_controls_bg_color: #d9e5ee;
+    --main_controls_color: black;
+    --main_right_render_bg_color: #d9e5ee; 
+    --main_right_border_left: #c5cbd0;
+    --video_border: #c5cbd0;
+    --hover_bg_color: #4f5f6685;
+    --main_header_color: black;
+    --main_chat_window_border_bottom: #c5cbd0;
+    --main_message_container_input_color: black;
+    --messages_color: black;
+    --text_right_bg_color: #f8cacf;
+    --text_left_bg_color: #aed1ef;
+    --main_message_send_color: black;
+    --user_avatar_bg_color: #f8cacf;
+    --user_name_color: black;
+} 
+
+
+/* main layout ====================================================================================================== */
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+/* we want 80% of the horizonatl screen for videos */
+.main_left {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+}
+
+/* and the remaining 20% for the chat on the right */
+.main_right {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid var(--main_right_border_left);
+}
+
+.main_right_render{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    background-color: var(--main_right_render_bg_color);
+}
+
+.main_videos {
+    flex-grow: 1;
+    background-color: var( --main_videos_bg_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video-grid{
+    display: flex;
+    justify-content: center;
+} 
+
+video{
+    height: 30rem;
+    width: 30rem;
+    object-fit: cover;
+    padding: 3px;
+    border: 2px solid var(--video_border);
+    margin: 20px;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.main_controls {
+    display: flex;
+    background-color: var(--main_controls_bg_color);
+    color: var( --main_controls_color);
+    padding: 5px;
+}
+
+.main_controls_block{
+    display: flex;
+    justify-content: center;
+}
+
+.mid-block{
+    flex: 1;
+}
+
+.main_controls_button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 10px;
+    min-width: 80px;
+    cursor: pointer;
+}
+
+.main_controls_button i {
+     font-size: 20px; 
+}
+
+.leave_meeting{
+    background-color: #b81c1c;
+    color: whitesmoke;
+    border: none;
+    border-radius: 7px;
+    width: 50px;
+    padding: 5px 8px;
+}
+
+.hover:hover{
+    background-color: var(--hover_bg_color);
+    border-radius: 10px;
+}
+
+.span{
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.main_header{
+    color: var(--main_header_color);
+    text-align: center;
+    padding-top: 10px;
+}
+
+.main_chat_window{
+    flex-grow: 1;
+    overflow-y: scroll;
+    border-bottom: 1px solid var( --main_chat_window_border_bottom);
+}
+
+.main_message_container{
+    padding: 20px 12px;
+    display: flex;
+}
+
+.main_message_container input{
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    color: var(--main_message_container_input_color);
+}
+
+
+/* messages ========================================================================================================= */
+.messages{
+    list-style: none;
+    word-break: break-all;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    color: var(--messages_color);
+}
+
+.messages > li {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    align-items: normal;
+}
+
+.messages > li > .message {
+    display: flex;
+    flex-direction: column;
+}
+
+.text{
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-bottom: 3px;
+    width: fit-content;
+    max-width: 160px;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.text_right{
+    background-color: var(--text_right_bg_color);
+}
+
+.text_left{
+    background-color: var(--text_left_bg_color);
+}
+
+.messages > li.message-left {
+    align-self: flex-start;
+}
+
+.messages > li.message-right {
+    align-self: flex-end;
+}
+
+.user{
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.left-user{
+    align-self: flex-start;
+}
+
+.right-user{
+    align-self: flex-end;
+}
+
+#send-btn{
+    background-color: transparent;
+    border: none;
+}
+
+.main_message_send > i {
+    color: var(--main_message_send_color);
+}
+
+.main_message_send:active,
+.main_message_send:focus {
+    outline: 0;
+}
+
+.main_message_send:hover > i {
+    color: #EB534B;
+}
+
+.system-message {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.system-message > span {
+    font-size: 12px;
+}
+
+.center{
+    text-align: center;
+}
+
+.margin-hour{
+    margin-top: 3px;
+}
+
+.margin-name{
+    margin: 3px 5px 0 0;
+}
+
+/* conditions ========================================================================================================*/
+.screen-full{
+    flex: 1;
+}
+
+.screen-hide {
+    display: none;
+}
+
+.fa-microphone-slash,
+.fa-video-slash {
+    color: #eb534b;
+}
+
+
+/* participants =======================================================================================================*/
+#users {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    padding: 5px;
+}
+
+.user-participant {
+    display: flex;
+    list-style: none;
+    padding: 10px;
+    align-items: center;
+}
+
+.user_avatar {
+    width: 34px;
+    height: 34px;
+    background-color: var(--user_avatar_bg_color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 17px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.user_name {
+    color: var(--user_name_color);
+    flex: 1;
+}
+
+
+
+
+
+

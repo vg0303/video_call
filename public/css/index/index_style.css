@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;  /*helps to navigate to a section of the website as mentioned in the navbar*/
+}
+
+/* navigation bar =======================================================================================================================================*/
+.navbar{
+    display: flex; /*flex helps to bring things in a row*/
+    align-items: center;
+    position: sticky; /*to make the navbar stick to the page  */
+    top: 0;
+}
+
+.navbar::before{
+    content: "";
+    background-color: #282733;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#logo{
+    margin: 6px 10px;
+}
+
+#logo img{
+    height: 40px;
+    margin: 0px 3px; 
+    border-radius: 300px;
+    width: 40px;
+}
+
+.navbar ul{ /*(.abc xyz) means that access xyz which is under the parent abc, not all the xyz in the html code*/
+    display: flex;
+}
+
+.item{
+    height: 100%;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hover{
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+.hover:hover{
+    color: black;
+    background-color: white;
+}
+
+.translator{
+    margin: 0 5px;
+    display: block;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+.goog-te-gadget-simple{
+    height: 22px;
+}
+
+.goog-te-gadget-simple span{
+    display: inline-flex;
+}
+
+.goog-te-menu-value{
+    padding: 0;
+}
+
+.goog-te-gadget-simple span a{
+    padding: 0;
+}
+
+.goog-te-gadget-simple span a span{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Home section =========================================================================================================================================*/
+
+#home::before{
+    content: "";
+    position: absolute;
+    background: url(/img/teams_newmeet.png) no-repeat center center/cover;
+    height: 53%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;   
+}
+
+#home{
+    height:420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome{
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    padding-bottom: 30px;
+}
+
+.content{
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 3px;
+    font-weight:900;
+}
+
+
+
+/* meeting section ==================================================================================================================================*/
+#meeting{
+    background-color: #f2f2f7;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information{
+    padding: 19px;
+    margin: 0 10px;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.elements{
+    padding: 5px 0;
+}
+
+.meeting-h2{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 30px;
+    text-align: center;
+    color: rgb(84 81 170);
+}
+
+.newmeet-btn{
+    height: 2rem;
+    width: 7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(84 81 170);
+    border: none;
+}
+
+.newmeet-btn:hover{
+    background-color: #3a345ede;
+}
+
+.newmeet-btn a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1rem;
+}
+
+.meet-id{
+    height: 1.7rem;
+    padding-left: 5px;
+}
+
+.join-btn{
+    height: 2rem;
+    width: 7rem;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: rgb(84 81 170);
+    color: whitesmoke;
+    font-size: 1rem;
+    border: none;
+}
+
+.join-btn:hover{
+    background-color: #3a345ede;
+}
+
+/* Chat =============================================================================================================================================*/
+
+/* footer ===============================================================================================================================================*/
+footer{
+    background: rgb(34, 33, 46);
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    height: 35%;
+    font-size: medium;
+    text-align: center;
+}
+
+
+/* utility classes ======================================================================================================================================*/
+
+
