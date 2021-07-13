@@ -1,0 +1,3 @@
+[submodule "myChat"]
+	path = myChat
+	url = https://github.com/vg0303/myChat.git
